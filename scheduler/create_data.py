@@ -10,5 +10,7 @@ if __name__ == '__main__':
         PredictionResult(date(2020, 4, 27), 'v1', 173, 95, 14160, 115, 15020, 40, 16110, 48, 13810, 82, 15220, 12, 8710, 28, 10330),
         PredictionResult(date(2020, 4, 28), 'v1', 171, 107, 19960, 132, 17350, 41, 18170, 50, 14960, 85, 14170, 13, 12160, 31, 13780)
     ]
-    prediction_result_repository.insert(prediction_results)
+    for result in prediction_results:
+        prediction_result_repository.insert(result)
+
     print('completed!')
